@@ -117,7 +117,7 @@ def adam_bashforth(y0, t0, h, qtd, expr, ordem, metodoInicial, valorInicial):
 		u = getValorInicial(valorInicial, yn, tn, h, expr, ordem)
 	else:
 		saida.write("Metodo Adam-Bashforth ( ordem = " + str(ordem) + " )\n")
-		u = lista
+		u = valorInicial
 
 	saida.write("y(" + str(tn) + ") = " + str(yn) + "\n")
 	saida.write("h = " + str(h) + "\n")
@@ -169,7 +169,7 @@ def adam_multon(y0, t0, h, qtd, expr, ordem, metodoInicial, valorInicial):
 		u = getValorInicial(valorInicial, yn, tn, h, expr, ordem+1)
 	else:
 		saida.write("Metodo Adam-Multon ( ordem = " + str(ordem) + " )\n")
-		u = lista
+		u = valorInicial
 		u.insert(ordem, getValorInicial("runge_kutta", u[ordem-1], tn + (ordem-1)*h, h, expr, 2)[1])
 
 	saida.write("y(" + str(tn) + ") = " + str(yn) + "\n")

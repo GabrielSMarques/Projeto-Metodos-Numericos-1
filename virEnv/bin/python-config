@@ -1,4 +1,4 @@
-#!/home/gabriel/Documentos/Metodos/virEnv/bin/python
+#!/home/gabriel/GitHub/Projeto-Metodos-Numericos-1/virEnv/bin/python
 
 import sys
 import getopt
